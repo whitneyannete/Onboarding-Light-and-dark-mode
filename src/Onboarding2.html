@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>Onboarding2/2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="font-Inter">
+  <div class="py-12 lg:py-20 xl:py-32 px-5 sm:px-10 lg:px-16 xl:px-32 grid grid-cols-12 gap-4 sm:gap-7 lg:gap-9 bg-white dark:bg-zinc-900">
+    <div class="col-span-12 lg:col-span-7 p-4 sm:p-6 lg:p-8 bg-gray-50 dark:bg-neutral-800 space-y-9 rounded-xl">
+        <p class="text-black  dark:text-white text-base md:text-lg font-semibold">Create a Bank/ PSP account</p>
+        <div class="p-3 sm:p-4 lg:p-6 sm:flex justify-start space-y-3 sm:space-y-0 gap-6 rounded-xl bg-white dark:bg-zinc-900">
+            <div class="space-y-1 sm:space-y-3">
+                <p class="text-black  dark:text-white text-xs md:text-sm font-medium capitalize">application ref: </p>
+                <p class="text-black  dark:text-white text-sm md:text-base font-normal capitalize">9856709873456</p>
+            </div>
+            <div class="space-y-1 sm:space-y-3">
+                <p class="text-black  dark:text-white text-xs md:text-sm font-medium capitalize">Developer Status </p>
+                <button class="rounded-2xl border border-emerald-500 dark:border-[#08EA80] flex py-[2px] lg:py-1 px-[10px] justify-center items-center">
+                    <span class="text-emerald-500 dark:text-[#08EA80] text-center text-[10px] md:text-xs font-medium">Approved on 23/01/2004</span>
+                </button>
+            </div>
+        </div>
+        <div>
+            <div class="rounded-xl bg-sky-700 dark:bg-blue-500 w-full h-[3px]"></div>
+            <p class="text-black  dark:text-white text-xs md:text-sm font-normal ">2/2</p>
+        </div>
+        <div class="space-y-2 sm:space-y-3 sm:pt-4">
+            <!-- Official Email Address -->
+            <div class="">
+                <label for="name" class=" text-black  dark:text-white text-xs md:text-sm font-medium capitalize pb-1">Official Email Address <span class="text-[#EA555B]">*</span></label>
+                <div class="sm:flex flex-1 text-right space-y-1 sm:space-y-0">
+                    <input id="name" type="text"  class=" border  border-gray-300 dark:border-zinc-800 shadow-sm px-3 py-2 text-sm md:text-base font-normal w-full text-black  dark:text-white leading-tight focus:outline-none focus:shadow-outline focus:bg-none bg-white dark:bg-zinc-900 rounded-tl-lg rounded-bl-lg rounded-tr-lg rounded-br-lg sm:rounded-tr-none sm:rounded-br-none">
+                    <button class="md:flex justify-center items-center px-4 py-2 inline-block  text-white text-xs sm:text-sm md:text-base bg-blue-500 font-medium rounded-tr-lg rounded-br-lg rounded-tl-lg rounded-bl-lg sm:rounded-tl-none sm:rounded-bl-none whitespace-nowrap">Send OTP</button>
+                </div>
+            </div>
+            <div class="">
+                <label for="OTP" class=" text-black  dark:text-white text-xs md:text-sm font-medium capitalize pb-1 tracking-tight sm:tracking-normal">OTP ( sent to the email provided above<span class="text-[#EA555B]">*</span> )</label>
+                <input id="OTP" type="password" placeholder="******" class="rounded-lg border focus:bg- border-gray-300 dark:border-zinc-800 shadow-sm px-3 py-2 text-sm md:text-base font-normal w-full text-black  dark:text-white leading-tight focus:outline-none focus:shadow-outline bg-white dark:bg-zinc-900 " oninput="maskPassword(this)">
+            </div>
+            <!-- Resend -->
+            <p class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-normal ">
+            This code will only be valid for the next 5 minutes. Did not get a code?
+            <a href="#" class="text-sky-700 dark:text-blue-500 cursor-pointer underline">  Resend</a>
+            </p>
+        </div>
+        <div class="space-y-2 sm:space-y-3 sm:pt-4">
+            <!-- Official Phone number* -->
+            <div class="">
+            <label for="name" class=" text-black  dark:text-white text-xs md:text-sm font-medium capitalize pb-1">Official Phone number <span class="text-[#EA555B]">*</span></label>
+            <div class="sm:flex flex-1 w-full">
+                <div class="flex items-center gap-1 sm:gap-1 overflow-hidden border shadow-sm rounded-tl-lg rounded-bl-lg px-3 py-1 rounded-tr-lg rounded-br-lg sm:rounded-tr-none sm:rounded-br-none bg-white dark:bg-zinc-900 w-full max-h-full">
+                    <div class="flex items-center gap-0 pl-1 sm:pl-2 text-black dark:text-white bg-white dark:bg-zinc-900 relative">
+                        <img src="Assets/KE.png" alt="country code flag" class="h-4 w-auto">
+                        <select name="code" class="max-w-16 !bg-transparent rounded-none border-gray-300 dark:border-zinc-800 !ring-0 !shadow-none text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-medium focus:outline-none">
+                            <option class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-medium">Select...</option>
+                            <option value="kenya" selected="">+254</option>
+                        </select>
+                    </div>
+                    <input type="text" id="sendOTP" name="sendOTP" class="flex-1 pl-8 sm:pl-0 !border-0 !ring-0 !shadow-none !bg-transparent !leading-normal focus:outline-none focus:shadow-outline" placeholder="712345678">
+                </div>
+                <div class="flex items-center justify-end flex-shrink-0 pt-1 sm:pt-0">
+                    <button class="justify-center items-center px-4 py-2 inline-block text-white text-xs sm:text-sm md:text-base bg-blue-500 font-medium rounded-tr-lg rounded-br-lg rounded-tl-lg rounded-bl-lg sm:rounded-tl-none sm:rounded-bl-none whitespace-nowrap">Send OTP</button>
+                </div>
+            </div>
+            </div>
+            <div class="">
+                <label for="otp" class=" text-black  dark:text-white text-xs md:text-sm font-medium capitalize pb-1 stracking-tight sm:tracking-normal">OTP ( sent to the number provided above<span class="text-[#EA555B]">*</span> )</label>
+                <input id="otp" type="password" placeholder="******" class="rounded-lg border  border-gray-300 dark:border-zinc-800 shadow-sm px-3 py-2 text-sm md:text-base font-normal w-full text-black  dark:text-white leading-tight focus:outline-none focus:shadow-outline bg-white dark:bg-zinc-900" oninput="maskPassword(this)">
+            </div>
+            <!-- Resend -->
+            <p class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-normal ">
+              This code will only be valid for the next 5 minutes. Did not get a code?
+              <a href="#" class="text-[#3597F8] cursor-pointer underline">  Resend</a>
+            </p>
+        </div>
+        <div class="font-semibold flex  gap-3 justify-end items-end self-stretch ">
+            <button class="flex justify-center items-center px-4 md:px-[18px] py-2 md:py-[10px] rounded-lg  text-black  dark:text-white text-sm md:text-base bg-white dark:bg-zinc-900 border  border-gray-300 dark:border-zinc-800 font-medium">Cancel</button>
+            <button class="flex justify-center items-center px-4 md:px-[18px] py-2 md:py-[10px] rounded-lg text-white text-sm md:text-base bg-[#3482FF] font-medium">Next</button>
+        </div>
+        </div>              
+        <img src="Assets/img-1.png" alt="" class="lg:col-span-5 h-auto hidden lg:block">
+    </div>
+    <!-- Toggle Dark Mode -->
+    <div class="text-center mt-6">
+        <button id="darkModeToggle" class=" inline-block justify-center items-center px-4 md:px-[18px] py-2 md:py-[10px] rounded-lg text-white text-sm md:text-base bg-[#3482FF] font-medium">Toggle Dark Mode</button>
+    </div>
+    <script>
+      const darkModeToggle = document.querySelector('#darkModeToggle');
+  
+  darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+  });
+    </script>
+
+</body>
+</body>
+</html>
