@@ -5,124 +5,135 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
   <title>Onboarding3</title>
+  <script src="app.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body class="font-Inter">
-  <div class="py-10 lg:py-20 xl:py-32 px-5 sm:px-10 lg:px-16 xl:px-32 grid grid-cols-12 gap-4 sm:gap-7 lg:gap-9 bg-white dark:bg-zinc-900">
-    <div class=" lg:hidden col-span-12 lg:col-span-5 w-full">
-      <div class=" p-4 bg-orange-50  dark:bg-stone-900 h-fit rounded-xl border border-amber-300 justify-start items-start gap-2 inline-flex w-full">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-[#EA9D2C] dark:stroke-[#FBAB35] ">
-            <path d="M10.0001 7.50019V10.8335M10.0001 14.1669H10.0085M8.84622 3.24329L1.99215 15.0821C1.61198 15.7388 1.42189 16.0671 1.44999 16.3366C1.47449 16.5716 1.59763 16.7852 1.78876 16.9242C2.0079 17.0835 2.38728 17.0835 3.14605 17.0835H16.8542C17.613 17.0835 17.9923 17.0835 18.2115 16.9242C18.4026 16.7852 18.5258 16.5716 18.5503 16.3366C18.5783 16.0671 18.3883 15.7388 18.0081 15.0821L11.154 3.24329C10.7752 2.58899 10.5858 2.26184 10.3387 2.15196C10.1232 2.05612 9.87709 2.05612 9.66154 2.15196C9.41443 2.26184 9.22503 2.58899 8.84622 3.24329Z" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <div class="grow shrink basis-0 flex-col justify-start items-start gap-3 inline-flex w-full">
-            <div class="self-stretch h-fit flex-col justify-start items-start gap-2 flex">
-              <p class="self-stretch text-amber-700 dark:text-amber-300 text-xs md:text-sm font-semibold leading-tight">Pending Admin  approval</p>
-              <p class="self-stretch text-amber-700 dark:text-amber-300 text-xs md:text-sm font-normal leading-tight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam.</p>
-            </div>
+  <div class="py-7 lg:py-9 xl:py-11 px-5 sm:px-10 lg:px-16 xl:px-28 bg-white dark:bg-zinc-900">
+    <!-- Topbar -->
+    <div class="w-full justify-between items-center inline-flex pb-4 md:pb-8 lg:pb-14">
+      <div class="text-black dark:text-white text-3xl md:text-4xl font-extrabold  capitalize leading-normal">GUPG</div>
+      <div class=" rounded-full bg-white dark:bg-zinc-900 flex items-center ml-4 p-1 gap-1.5 text-gray-800 dark:text-white">
+        <button id="lightModeToggle" type="button" class="w-7 h-7 grid place-content-center rounded-full shadow dark:shadow-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"></path>
+            </svg>
+        </button>
+        <button id="darkModeToggle" type="button" class="w-7 h-7 grid place-content-center dark:bg-[#222325] rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"></path>
+            </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mainbody -->
+    <div class="grid grid-cols-12 gap-4 sm:gap-7 lg:gap-9 ">
+      <!-- mobilescreen admin approval -->
+      <div class=" lg:hidden col-span-12 lg:col-span-5 w-full">
+        <div class=" p-4 bg-orange-50  dark:bg-stone-900 h-fit rounded-xl border border-amber-300 justify-start items-start gap-2 inline-flex w-full">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-[#EA9D2C] dark:stroke-[#FBAB35] ">
+              <path d="M10.0001 7.50019V10.8335M10.0001 14.1669H10.0085M8.84622 3.24329L1.99215 15.0821C1.61198 15.7388 1.42189 16.0671 1.44999 16.3366C1.47449 16.5716 1.59763 16.7852 1.78876 16.9242C2.0079 17.0835 2.38728 17.0835 3.14605 17.0835H16.8542C17.613 17.0835 17.9923 17.0835 18.2115 16.9242C18.4026 16.7852 18.5258 16.5716 18.5503 16.3366C18.5783 16.0671 18.3883 15.7388 18.0081 15.0821L11.154 3.24329C10.7752 2.58899 10.5858 2.26184 10.3387 2.15196C10.1232 2.05612 9.87709 2.05612 9.66154 2.15196C9.41443 2.26184 9.22503 2.58899 8.84622 3.24329Z" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="grow shrink basis-0 flex-col justify-start items-start gap-3 inline-flex w-full">
+              <div class="self-stretch h-fit flex-col justify-start items-start gap-2 flex">
+                <p class="self-stretch text-amber-700 dark:text-amber-300 text-xs md:text-sm font-semibold leading-tight">Pending Admin  approval</p>
+                <p class="self-stretch text-amber-700 dark:text-amber-300 text-xs md:text-sm font-normal leading-tight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam.</p>
+              </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-span-12 lg:col-span-7 p-4 sm:p-6 lg:p-8 bg-gray-50 dark:bg-neutral-800 space-y-9 rounded-xl">
-        <p class="text-black dark:text-white text-base md:text-lg font-semibold">Create a Bank/ PSP account</p>
-        <div class="p-3 sm:p-4 lg:p-6 sm:flex justify-start space-y-3 sm:space-y-0 gap-6 rounded-xl bg-white dark:bg-zinc-900">
-          <div class="space-y-1 sm:space-y-3">
-              <p class="text-black  dark:text-white text-xs md:text-sm font-medium capitalize">application ref: </p>
-              <p class="text-black  dark:text-white text-sm md:text-base font-normal capitalize">9856709873456</p>
-          </div>
-          <div class="space-y-1 sm:space-y-3">
-              <p class="text-black  dark:text-white text-xs md:text-sm font-medium capitalize">Developer Status </p>
-              <button class="rounded-2xl border border-emerald-500 dark:border-[#08EA80] flex py-[2px] lg:py-1 px-[10px] justify-center items-center">
-                  <span class="text-emerald-500 dark:text-[#08EA80] text-center text-[10px] md:text-xs font-medium">Approved on 23/01/2004</span>
-              </button>
-          </div>
-      </div>
-        <div class=" p-6 bg-white dark:bg-zinc-900 rounded-xl justify-start items-start gap-4 lg:gap-6 inline-flex w-full">
-            <div class="grow shrink basis-0 flex-col justify-start items-start gap-2 lg:gap-3 inline-flex w-full">
-              <div class=" flex-col justify-start items-start gap-2 lg:gap-[13px] flex">
-                <p class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-medium  capitalize leading-tight">Name</p>
-                <p class=" text-black  dark:text-white text-sm md:text-base font-normal  leading-normal">ABC limited</p>
-              </div>
-              <div class=" self-stretch border text-sky-700 dark:border-zinc-800"></div>
-              <div class=" flex-col justify-start items-start gap-2 lg:gap-[13px] flex w-full">
-                <p class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-medium  capitalize leading-tight">License No.</p>
-                <p class=" text-black  dark:text-white text-sm md:text-base font-normal  leading-normal">00000000</p>
-              </div>
-              <div class="self-stretch  border text-sky-700 dark:border-zinc-800"></div>
-              <div class=" flex-col justify-start items-start gap-2 lg:gap-[13px] flex w-full">
-                <div class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-medium  capitalize leading-tight">Attached License </div>
-                <div class="self-stretch justify-between items-start gap-2 lg:gap-[13px] inline-flex md:pr-[30%]">
-                  <p class=" text-black  dark:text-white text-sm md:text-base font-normal  leading-normal">abcltdl0987667</p>
-                  <p class="text-sky-700 dark:text-blue-500 text-sm md:text-base font-medium  leading-normal">View</p>
+      <!-- Leftside -->
+      <div class="col-span-12 lg:col-span-7 p-4 sm:p-6 lg:p-8 bg-gray-50 dark:bg-neutral-800 space-y-9 rounded-xl">
+          <p class="text-black dark:text-white text-base md:text-lg font-semibold">Create a Bank/ PSP account</p>
+          <div class="p-3 sm:p-4 lg:p-6 sm:flex justify-start space-y-3 sm:space-y-0 gap-6 rounded-xl bg-white dark:bg-zinc-900">
+            <div class="space-y-1 sm:space-y-3">
+                <p class="text-black  dark:text-white text-xs md:text-sm font-medium capitalize">application ref: </p>
+                <p class="text-black  dark:text-white text-sm md:text-base font-normal capitalize">9856709873456</p>
+            </div>
+            <div class="space-y-1 sm:space-y-3">
+                <p class="text-black  dark:text-white text-xs md:text-sm font-medium capitalize">Developer Status </p>
+                <button class="rounded-2xl border border-emerald-500 dark:border-[#08EA80] flex py-[2px] lg:py-1 px-[10px] justify-center items-center">
+                    <span class="text-emerald-500 dark:text-[#08EA80] text-center text-[10px] md:text-xs font-medium">Approved on 23/01/2004</span>
+                </button>
+            </div>
+        </div>
+          <div class=" p-6 bg-white dark:bg-zinc-900 rounded-xl justify-start items-start gap-4 lg:gap-6 inline-flex w-full">
+              <div class="grow shrink basis-0 flex-col justify-start items-start gap-2 lg:gap-3 inline-flex w-full">
+                <div class=" flex-col justify-start items-start gap-2 lg:gap-[13px] flex">
+                  <p class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-medium  capitalize leading-tight">Name</p>
+                  <p class=" text-black  dark:text-white text-sm md:text-base font-normal  leading-normal">ABC limited</p>
+                </div>
+                <div class=" self-stretch border text-sky-700 dark:border-zinc-800"></div>
+                <div class=" flex-col justify-start items-start gap-2 lg:gap-[13px] flex w-full">
+                  <p class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-medium  capitalize leading-tight">License No.</p>
+                  <p class=" text-black  dark:text-white text-sm md:text-base font-normal  leading-normal">00000000</p>
+                </div>
+                <div class="self-stretch  border text-sky-700 dark:border-zinc-800"></div>
+                <div class=" flex-col justify-start items-start gap-2 lg:gap-[13px] flex w-full">
+                  <div class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-medium  capitalize leading-tight">Attached License </div>
+                  <div class="self-stretch justify-between items-start gap-2 lg:gap-[13px] inline-flex md:pr-[30%]">
+                    <p class=" text-black  dark:text-white text-sm md:text-base font-normal  leading-normal">abcltdl0987667</p>
+                    <p class="text-sky-700 dark:text-blue-500 text-sm md:text-base font-medium  leading-normal">View</p>
+                  </div>
+                </div>
+                <div class="self-stretch h-[0px] border text-sky-700 dark:border-zinc-800"></div>
+                <div class="  flex-col justify-start items-start gap-2 lg:gap-[13px] w-full">
+                  <div class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-medium  capitalize leading-tight">Authorization letter to treasury</div>
+                  <div class="flex justify-between items-start gap-2 lg:gap-[13px] md:pr-[30%]">
+                    <p class="text-black  dark:text-white text-sm md:text-base font-normal leading-normal">abcltdl0987667</p>
+                    <p class="text-sky-700 dark:text-blue-500 text-sm md:text-base font-medium leading-normal">View</p>
+                </div>
+                
+                
+                </div>
+                <div class="self-stretch h-[0px] border text-sky-700 dark:border-zinc-800"></div>
+                <div class="  flex-col justify-start items-start gap-2 lg:gap-[13px] w-full">
+                  <div class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-medium  capitalize leading-tight">Logo</div>
+                  <div class="flex justify-between items-start gap-2 lg:gap-[13px] md:pr-[30%]">
+                    <p class="text-black  dark:text-white text-sm md:text-base font-normal leading-normal">abclogo</p>
+                    <p class="text-sky-700 dark:text-blue-500 text-sm md:text-base font-medium leading-normal">View</p>
+                </div>
+                
+                
+                </div>
+                
+                <div class="self-stretch h-px border text-sky-700 dark:border-zinc-800"></div>
+                <div class=" flex-col justify-start items-start gap-2 lg:gap-[13px] flex w-full">
+                  <p class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-medium  capitalize leading-tight">Description</p>
+                  <p class="text-black  dark:text-white text-sm md:text-base font-normal  leading-normal">This is the leading payment services provider in east africa</p>
+                </div>
+                <div class="self-stretch h-px border text-sky-700 dark:border-zinc-800"></div>
+                <div class=" flex-col justify-start items-start gap-2 lg:gap-[13px] flex">
+                  <p class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-medium  capitalize leading-tight">Phone</p>
+                  <p class="text-black  dark:text-white text-sm md:text-base font-normal  leading-normal">+254 000 000 000</p>
+                </div>
+                <div class="self-stretch h-0.5 border text-sky-700 dark:border-zinc-800"></div>
+                <div class=" flex-col justify-start items-start gap-2 lg:gap-[13px] flex">
+                  <p class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-medium  capitalize leading-tight">Email</p>
+                  <p class="text-black  dark:text-white text-sm md:text-base font-normal  leading-normal">info@abc.com</p>
                 </div>
               </div>
-              <div class="self-stretch h-[0px] border text-sky-700 dark:border-zinc-800"></div>
-              <div class="  flex-col justify-start items-start gap-2 lg:gap-[13px] w-full">
-                <div class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-medium  capitalize leading-tight">Authorization letter to treasury</div>
-                <div class="flex justify-between items-start gap-2 lg:gap-[13px] md:pr-[30%]">
-                  <p class="text-black  dark:text-white text-sm md:text-base font-normal leading-normal">abcltdl0987667</p>
-                  <p class="text-sky-700 dark:text-blue-500 text-sm md:text-base font-medium leading-normal">View</p>
+      </div>
+      
+      </div>
+      <!-- Rightside -->
+      <div class="hidden lg:block col-span-12 lg:col-span-5">
+        <div class=" p-4 bg-orange-50  dark:bg-stone-900 h-fit rounded-xl border border-amber-300 justify-start items-start gap-2 inline-flex">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-[#EA9D2C] dark:stroke-[#FBAB35] ">
+              <path d="M10.0001 7.50019V10.8335M10.0001 14.1669H10.0085M8.84622 3.24329L1.99215 15.0821C1.61198 15.7388 1.42189 16.0671 1.44999 16.3366C1.47449 16.5716 1.59763 16.7852 1.78876 16.9242C2.0079 17.0835 2.38728 17.0835 3.14605 17.0835H16.8542C17.613 17.0835 17.9923 17.0835 18.2115 16.9242C18.4026 16.7852 18.5258 16.5716 18.5503 16.3366C18.5783 16.0671 18.3883 15.7388 18.0081 15.0821L11.154 3.24329C10.7752 2.58899 10.5858 2.26184 10.3387 2.15196C10.1232 2.05612 9.87709 2.05612 9.66154 2.15196C9.41443 2.26184 9.22503 2.58899 8.84622 3.24329Z" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="grow shrink basis-0 flex-col justify-start items-start gap-3 inline-flex w-full">
+              <div class="self-stretch h-fit flex-col justify-start items-start gap-2 flex">
+                <p class="self-stretch text-amber-700 dark:text-amber-300 text-xs md:text-sm font-semibold leading-tight">Pending Admin  approval</p>
+                <p class="self-stretch text-amber-700 dark:text-amber-300 text-xs md:text-sm font-normal leading-tight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam.</p>
               </div>
-              
-              
-              </div>
-              <div class="self-stretch h-[0px] border text-sky-700 dark:border-zinc-800"></div>
-              <div class="  flex-col justify-start items-start gap-2 lg:gap-[13px] w-full">
-                <div class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-medium  capitalize leading-tight">Logo</div>
-                <div class="flex justify-between items-start gap-2 lg:gap-[13px] md:pr-[30%]">
-                  <p class="text-black  dark:text-white text-sm md:text-base font-normal leading-normal">abclogo</p>
-                  <p class="text-sky-700 dark:text-blue-500 text-sm md:text-base font-medium leading-normal">View</p>
-              </div>
-              
-              
-              </div>
-              
-              <div class="self-stretch h-px border text-sky-700 dark:border-zinc-800"></div>
-              <div class=" flex-col justify-start items-start gap-2 lg:gap-[13px] flex w-full">
-                <p class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-medium  capitalize leading-tight">Description</p>
-                <p class="text-black  dark:text-white text-sm md:text-base font-normal  leading-normal">This is the leading payment services provider in east africa</p>
-              </div>
-              <div class="self-stretch h-px border text-sky-700 dark:border-zinc-800"></div>
-              <div class=" flex-col justify-start items-start gap-2 lg:gap-[13px] flex">
-                <p class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-medium  capitalize leading-tight">Phone</p>
-                <p class="text-black  dark:text-white text-sm md:text-base font-normal  leading-normal">+254 000 000 000</p>
-              </div>
-              <div class="self-stretch h-0.5 border text-sky-700 dark:border-zinc-800"></div>
-              <div class=" flex-col justify-start items-start gap-2 lg:gap-[13px] flex">
-                <p class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-medium  capitalize leading-tight">Email</p>
-                <p class="text-black  dark:text-white text-sm md:text-base font-normal  leading-normal">info@abc.com</p>
-              </div>
-            </div>
-    </div>
-    
-    </div>
-    <div class="hidden lg:block col-span-12 lg:col-span-5">
-      <div class=" p-4 bg-orange-50  dark:bg-stone-900 h-fit rounded-xl border border-amber-300 justify-start items-start gap-2 inline-flex">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-[#EA9D2C] dark:stroke-[#FBAB35] ">
-            <path d="M10.0001 7.50019V10.8335M10.0001 14.1669H10.0085M8.84622 3.24329L1.99215 15.0821C1.61198 15.7388 1.42189 16.0671 1.44999 16.3366C1.47449 16.5716 1.59763 16.7852 1.78876 16.9242C2.0079 17.0835 2.38728 17.0835 3.14605 17.0835H16.8542C17.613 17.0835 17.9923 17.0835 18.2115 16.9242C18.4026 16.7852 18.5258 16.5716 18.5503 16.3366C18.5783 16.0671 18.3883 15.7388 18.0081 15.0821L11.154 3.24329C10.7752 2.58899 10.5858 2.26184 10.3387 2.15196C10.1232 2.05612 9.87709 2.05612 9.66154 2.15196C9.41443 2.26184 9.22503 2.58899 8.84622 3.24329Z" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <div class="grow shrink basis-0 flex-col justify-start items-start gap-3 inline-flex w-full">
-            <div class="self-stretch h-fit flex-col justify-start items-start gap-2 flex">
-              <p class="self-stretch text-amber-700 dark:text-amber-300 text-xs md:text-sm font-semibold leading-tight">Pending Admin  approval</p>
-              <p class="self-stretch text-amber-700 dark:text-amber-300 text-xs md:text-sm font-normal leading-tight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam.</p>
-            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
-    <!-- Toggle Dark Mode -->
-    <div class="text-center mt-6">
-       <button id="darkModeToggle" class=" inline-block justify-center items-center px-4 md:px-[18px] py-2 md:py-[10px] rounded-lg text-white text-sm md:text-base bg-[#3482FF] font-medium">Toggle Dark Mode</button>
-    </div>
-      <script>
-        const darkModeToggle = document.querySelector('#darkModeToggle');
-      
-        darkModeToggle.addEventListener('click', () => {
-          document.body.classList.toggle('dark');
-        });
-</script>
 </body>
 </body>
 </html>
